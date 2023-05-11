@@ -1,0 +1,397 @@
+
+
+/* アコーディオン */
+.s_01 .accordion_one {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.s_01 .accordion_one .accordion_header {
+  background-color: #fdff70;
+  color: rgb(117, 117, 117);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 11%;
+  text-align: center;
+  position: relative;
+  z-index: +1;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.s_01 .accordion_one:nth-of-type(2) .accordion_header {
+    background-color: #ffc979;
+}
+
+.s_01 .accordion_one:nth-of-type(3) .accordion_header {
+    background-color: #fff9a6;
+}
+
+.s_01 .accordion_one .accordion_header:hover {
+  opacity: 0.8;
+}
+
+.s_01 .accordion_one .accordion_header .i_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(117, 117, 117);
+  margin-top: -15px;
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transform-origin: center center;
+  transition-duration: 0.2s;
+}
+
+.s_01 .accordion_one .accordion_header .i_box .one_i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transform-origin: center center;
+  transition-duration: 0.2s;
+  position: relative;
+}
+.s_01 .accordion_one .accordion_header.open .i_box {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+
+.s_01 .accordion_one .accordion_header .i_box .one_i:before, .s_01 .accordion_one .accordion_header .i_box .one_i:after {
+  display: flex;
+  content: '';
+  background-color: rgb(117, 117, 117);
+  border-radius: 10px;
+  width: 18px;
+  height: 4px;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: center center;
+}
+
+.s_01 .accordion_one .accordion_header .i_box .one_i:before {
+  width: 4px;
+  height: 18px;
+  top: 0;
+  left: 7px;
+}
+
+.s_01 .accordion_one .accordion_header.open .i_box .one_i:before {
+  content: none;
+}
+
+.s_01 .accordion_one .accordion_header.open .i_box .one_i:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.s_01 .accordion_one .accordion_inner {
+  display: none;
+  padding: 30px 30px;
+  border:2px solid #fdff70;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+.s_01 .accordion_one:nth-of-type(2) .accordion_inner {
+  border:2px solid #ffc979;
+  border-top: none;
+}
+
+.s_01 .accordion_one:nth-of-type(3) .accordion_inner {
+  border:2px solid#fff9a6;
+  border-top: none;
+}
+
+.s_01 .accordion_one .accordion_inner .box_one {
+  max-height: 200px;
+  overflow: scroll;
+}
+
+.s_01 .accordion_one .accordion_inner p.txt_a_ac {
+  margin: 0;
+}
+
+.txt_a_ac_list{
+  list-style-type:decimal;
+  margin:0;
+}
+
+@media screen and (max-width: 1024px) {
+  .s_01 .accordion_one .accordion_header {
+    font-size: 18px;
+  }
+
+  /* .s_01 .accordion_one .accordion_header .i_box {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+  } */
+}
+
+@media screen and (max-width: 767px) {
+  .s_01 .accordion_one .accordion_header {
+    font-size: 16px;
+    text-align: left;
+    padding: 15px 60px 15px 15px;
+  }
+}
+
+
+
+/* スライダー */
+*{
+  box-sizing: border-box;
+}
+
+
+/* Slick サムネイル付き */
+* {
+  box-sizing: border-box;
+}
+.sliderArea {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.sliderArea.w300 {
+  max-width: 300px;
+}
+
+.slider_thumb{
+  max-width:400px;
+  margin:0 auto;
+}
+
+.slick-slide {
+  margin: 0 5px;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-prev, .slick-next {
+  z-index: 100;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #000;
+  font-weight:bolder;
+}
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+.thumb {
+  margin: 20px 0 0;
+}
+
+.thumb img{
+  max-width: 200px;
+  margin:0 auto;
+}
+
+.thumb .slick-slide {
+  cursor: pointer;
+}
+
+.thumb .slick-slide:hover {
+  opacity: .7;
+}
+
+
+
+/* flowernav basic styling ----- */
+
+nav { 
+  display:block; 
+  position:absolute;
+  left:37%;
+}
+nav img { border:none }
+
+nav ul { 
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+nav ul li { 
+  position:relative;
+}
+nav ul li a{
+  text-decoration: none;
+}
+nav ul ul { 
+  margin:0;
+  list-style-type:none;
+}
+
+/* nav ul ul li img{ width:100%; } */
+
+
+/* visual styling ------- */
+
+nav ul ul li {
+	width:100%;
+  height: 50px;
+	/* background-color:#345;
+	-moz-box-shadow: 0px 0px 3px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0px 0px 5px #aaa;
+	box-shadow: 0px 0px 5px #aaa; */
+	margin:0;
+	/* these are set by the plugin to maintain degradation */
+	position:absolute;
+	top:0;left:0;
+	display:block;
+	font-size:5vw;
+}
+
+nav#webdesign { 
+  top:800px; 
+  /* left:40%; */
+  /* width:100px; 
+  height:50px; */
+}
+
+/* nav#flash { top:30%; left:40%; width:50px; height:50px; } */
+  body{
+    height: 900px;
+  }
+
+  nav#webdesign{
+    top:600px;
+  }
+
+@media(max-width:1300px){
+  body{
+    height:700px;
+  }
+  nav#webdesign{
+    top:450px;
+  }  
+}
+@media(max-width:1000px){
+  body{
+    height:600px;
+  }
+  nav#webdesign{
+    top:300px;
+  }
+}
+@media(max-width:600px){
+  body{
+    height:500px;
+  }
+  nav#webdesign{
+    top:250px;
+  }
+}
+@media(max-width:400px){
+  body{
+    height:400px;
+  }
+  nav#webdesign{
+    top:200px;
+  }
+}
+  @media(max-width:300px){
+  body{
+    height:300px;
+  }
+  nav#webdesign{
+    top:150px;
+  }
+}
+
+.navbutton{
+	position:absolute;
+	width:100%;
+  /* height:100px; */
+  /* line-height: 100px; */
+  margin:0 auto;
+	color:rgb(255, 255, 255);
+	cursor: pointer;
+	font-size:50px;
+	/* top:-25px;left:-25px; needed offset for centering button to circle */
+	/* text-align:center;  */
+	/* background-color:rgb(143, 142, 142);  */
+	/* -moz-box-shadow: 1px 1px 12px rgba(0,0,0,.4);
+	-moz-border-radius: 50px;
+	-webkit-box-shadow: 1px 1px 12px rgba(0,0,0,.4);
+	-webkit-border-radius: 50px;
+	box-shadow: 1px 1px 12px rgba(0,0,0,.4);
+	border-radius: 50px;  */
+}
+
+
+.navbutton:hover{
+	color:rgb(255, 255, 255);
+	/* background-color:rgb(192, 192, 192);
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,.5);
+	box-shadow: 0px 0px 4px rgba(0,0,0,.5); */
+}
+
+
+/* #flash ul ul li {
+	width:85px; height: 64px;
+	background-color:#345;
+	-moz-box-shadow: 0px 0px 3px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0px 0px 5px #aaa;
+	box-shadow: 0px 0px 5px #aaa;
+	margin:0;
+	
+  ////these are set by the plugin to maintain degradation
+	position:absolute;
+	top:0;left:0;
+	display:block;
+	
+} */
+/* #flash .my_button{
+	position:absolute;
+	width:64px; height:64px; line-height: 64px;
+	top:0;left:9px; 
+  //needed for centering circle to button depending on widths/heights
+	color:#aaa;
+	text-align:center; 
+	background-color:#fff; 
+	cursor: move;
+	-moz-box-shadow: 1px 1px 8px rgba(0,0,0,.5);
+	-moz-border-radius: 50px;
+	-webkit-box-shadow: 1px 1px 8px rgba(0,0,0,.5);
+	-webkit-border-radius: 50px;
+	box-shadow: 1px 1px 8px rgba(0,0,0,.5);
+	border-radius: 50px;  
+} */
+/* #flash .my_button:hover{
+	color: #400;
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,.5);
+	box-shadow: 0px 0px 4px rgba(0,0,0,.5);
+} */
+
+
+
